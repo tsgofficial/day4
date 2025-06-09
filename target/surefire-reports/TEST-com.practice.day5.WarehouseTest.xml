@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.practice.day5.WarehouseTest" time="0.004" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.practice.day5.WarehouseTest" time="0.012" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="MN"/>
     <property name="sun.boot.library.path" value="/Users/macbook/.sdkman/candidates/java/17.0.9-tem/lib"/>
-    <property name="sun.java.command" value="/Users/macbook/Documents/school/practice/day5/target/surefire/surefirebooter-20250606164914506_3.jar /Users/macbook/Documents/school/practice/day5/target/surefire 2025-06-06T16-49-14_457-jvmRun1 surefire-20250606164914506_1tmp surefire_0-20250606164914506_2tmp"/>
+    <property name="sun.java.command" value="/Users/macbook/Documents/school/practice/day5/target/surefire/surefirebooter-20250609103149361_3.jar /Users/macbook/Documents/school/practice/day5/target/surefire 2025-06-09T10-31-49_303-jvmRun1 surefire-20250609103149361_1tmp surefire_0-20250609103149361_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/macbook/Documents/school/practice/day5/target/test-classes:/Users/macbook/Documents/school/practice/day5/target/classes:/Users/macbook/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/macbook/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/macbook/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/macbook/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/macbook/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/macbook/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/macbook/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/macbook/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/macbook/Documents/school/practice/day5/target/surefire/surefirebooter-20250606164914506_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/macbook/Documents/school/practice/day5/target/surefire/surefirebooter-20250609103149361_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.9+9"/>
@@ -55,21 +55,45 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testRemoveProduct" classname="com.practice.day5.WarehouseTest" time="0.001">
+  <testcase name="testMoveNullProductThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0"/>
+  <testcase name="testMoveNullDestinationLocationThrowsException" classname="com.practice.day5.WarehouseTest" time="0.001">
+    <system-out><![CDATA[[LOG] Added Test Product to warehouse. Current stock: 2/10
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveProduct" classname="com.practice.day5.WarehouseTest" time="0.0">
     <system-out><![CDATA[[LOG] Added Test Product to warehouse. Current stock: 2/10
 [LOG] Removed Test Product from warehouse. Current stock: 0/10
 ]]></system-out>
   </testcase>
-  <testcase name="testMoveNonExistentStock" classname="com.practice.day5.WarehouseTest" time="0.001"/>
-  <testcase name="testAddProductExceedsCapacity" classname="com.practice.day5.WarehouseTest" time="0.0"/>
-  <testcase name="testAddProduct" classname="com.practice.day5.WarehouseTest" time="0.001">
+  <testcase name="testMoveNullSourceLocationThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0">
     <system-out><![CDATA[[LOG] Added Test Product to warehouse. Current stock: 2/10
 ]]></system-out>
   </testcase>
+  <testcase name="testHasCapacityNegativeQuantityThrowsException" classname="com.practice.day5.WarehouseTest" time="0.001"/>
+  <testcase name="testMoveSameLocationThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0">
+    <system-out><![CDATA[[LOG] Added Test Product to warehouse. Current stock: 2/10
+]]></system-out>
+  </testcase>
+  <testcase name="testSetCapacityLessThanStockThrowsException" classname="com.practice.day5.WarehouseTest" time="0.001">
+    <system-out><![CDATA[[LOG] Added Test Product to warehouse. Current stock: 2/10
+]]></system-out>
+  </testcase>
+  <testcase name="testZeroCapacityThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0"/>
+  <testcase name="testSetNegativeCapacityThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0"/>
+  <testcase name="testMoveNonExistentStock" classname="com.practice.day5.WarehouseTest" time="0.001"/>
+  <testcase name="testNegativeCapacityThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0"/>
+  <testcase name="testAddProductExceedsCapacity" classname="com.practice.day5.WarehouseTest" time="0.001"/>
+  <testcase name="testAddProduct" classname="com.practice.day5.WarehouseTest" time="0.0">
+    <system-out><![CDATA[[LOG] Added Test Product to warehouse. Current stock: 2/10
+]]></system-out>
+  </testcase>
+  <testcase name="testAddNullProductThrowsException" classname="com.practice.day5.WarehouseTest" time="0.001"/>
+  <testcase name="testRemoveNullProductThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0"/>
   <testcase name="testMoveStock" classname="com.practice.day5.WarehouseTest" time="0.0">
     <system-out><![CDATA[[LOG] Added Test Product to warehouse. Current stock: 2/10
 [LOG] Moving product: Test Product (Qty: 2) from: Source to: Target
 ]]></system-out>
   </testcase>
+  <testcase name="testAddZeroQuantityProductThrowsException" classname="com.practice.day5.WarehouseTest" time="0.0"/>
   <testcase name="testHasCapacity" classname="com.practice.day5.WarehouseTest" time="0.001"/>
 </testsuite>
